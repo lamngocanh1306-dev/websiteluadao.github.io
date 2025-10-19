@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thông báo trúng thưởng</title>
+    <style>
+        /* CSS để căn giữa và làm nổi bật chữ */
+        body {
+            display: flex;
+            justify-content: center; /* Căn giữa theo chiều ngang */
+            align-items: center;    /* Căn giữa theo chiều dọc */
+            min-height: 100vh;      /* Chiếm toàn bộ chiều cao màn hình */
+            margin: 0;              /* Loại bỏ lề mặc định của body */
+            font-family: Arial, sans-serif; /* Chọn phông chữ */
+            background-color: #f0f0f0; /* Màu nền nhẹ */
+        }
+
+        h1 {
+            color: #4CAF50; /* Màu xanh lá cây nổi bật */
+            font-size: 4em; /* Kích thước chữ lớn */
+            text-align: center;
+            padding: 20px;
+            border: 5px solid #4CAF50; /* Đường viền xung quanh chữ */
+            border-radius: 15px; /* Bo tròn góc */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Thêm bóng đổ */
+            animation: pulse 1.5s infinite; /* Thêm hiệu ứng nhấp nháy */
+        }
+
+        /* Định nghĩa hiệu ứng nhấp nháy */
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+    <h1>🎉 BẠN ĐÃ TRÚNG THƯỞNG! 🥳</h1>
+</body>
+</html>
