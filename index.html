@@ -5,37 +5,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thông báo trúng thưởng</title>
     <style>
-        /* CSS để căn giữa và làm nổi bật chữ */
+        /* ======================================= */
+        /* CSS CHUNG (Áp dụng cho mọi thiết bị) */
+        /* ======================================= */
         body {
             display: flex;
-            justify-content: center; /* Căn giữa theo chiều ngang */
-            align-items: center;    /* Căn giữa theo chiều dọc */
-            min-height: 100vh;      /* Chiếm toàn bộ chiều cao màn hình */
-            margin: 0;              /* Loại bỏ lề mặc định của body */
-            font-family: Arial, sans-serif; /* Chọn phông chữ */
-            background-color: #f0f0f0; /* Màu nền nhẹ */
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f0f0f0 0%, #e0e0e0 100%); /* Nền gradient */
+            color: #333;
         }
 
         h1 {
-            color: #4CAF50; /* Màu xanh lá cây nổi bật */
-            font-size: 4em; /* Kích thước chữ lớn */
+            color: #FF6B6B; /* Màu đỏ nổi bật, vui vẻ */
             text-align: center;
-            padding: 20px;
-            border: 5px solid #4CAF50; /* Đường viền xung quanh chữ */
-            border-radius: 15px; /* Bo tròn góc */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Thêm bóng đổ */
-            animation: pulse 1.5s infinite; /* Thêm hiệu ứng nhấp nháy */
+            padding: 20px 30px;
+            border: 8px solid #FFD166; /* Viền màu vàng */
+            border-radius: 25px; /* Bo tròn góc nhiều hơn */
+            background-color: white;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25); /* Bóng đổ lớn hơn */
+            line-height: 1.2;
+            animation: pulse 1.5s infinite;
+            /* Thiết lập kích thước chữ mặc định cho máy tính */
+            font-size: 4em; 
         }
 
         /* Định nghĩa hiệu ứng nhấp nháy */
         @keyframes pulse {
             0% { transform: scale(1); }
-            50% { transform: scale(1.05); }
+            50% { transform: scale(1.03); }
             100% { transform: scale(1); }
+        }
+
+        /* ======================================= */
+        /* MEDIA QUERY (Tối ưu cho điện thoại) */
+        /* ======================================= */
+        /* Khi chiều rộng màn hình (viewport) nhỏ hơn hoặc bằng 600px */
+        @media (max-width: 600px) {
+            h1 {
+                /* Giảm kích thước chữ để vừa với màn hình điện thoại */
+                font-size: 2.5em; /* Giảm từ 4em xuống 2.5em */
+                padding: 15px 20px; /* Giảm khoảng cách đệm */
+                border-width: 5px; /* Giảm độ dày viền */
+                border-radius: 15px;
+            }
+
+            /* Thêm một chút padding cho body để chữ không bị sát mép điện thoại */
+            body {
+                padding: 10px;
+            }
         }
     </style>
 </head>
 <body>
-    <h1>🎉 BẠN ĐÃ TRÚNG THƯỞNG! 🥳</h1>
+    <h1>🎉 CHÚC MỪNG! <br> BẠN ĐÃ TRÚNG THƯỞNG! 🥳</h1>
 </body>
 </html>
